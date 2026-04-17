@@ -1,11 +1,10 @@
-import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import { ProductCard } from "@/components/Cards";
 import { products } from "@/data/products";
 
 export default function ProductsPage() {
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-bg min-h-screen">
       <PageHeader
         title="Our Products"
         subtitle="Browse our collection of premium 3D printed items."
@@ -16,8 +15,8 @@ export default function ProductsPage() {
             <ProductCard key={product.id} {...product} />
           ))}
         </div>
-        <div className="mt-12 text-center bg-indigo-50 rounded-xl p-8">
-          <p className="text-indigo-800 font-medium">More products coming soon! Contact us for custom orders.</p>
+        <div className="mt-12 text-center bg-banner-light rounded-xl p-8">
+          <p className="text-banner-dark font-medium">More products coming soon! Contact us for custom orders.</p>
         </div>
       </section>
     </div>

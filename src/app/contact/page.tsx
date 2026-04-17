@@ -3,7 +3,7 @@ import ContactForm from "@/components/ContactForm";
 
 export default function ContactPage() {
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-bg min-h-screen">
       <PageHeader
         title="Contact Us"
         subtitle="Have a question or want to place a custom order? We&apos;d love to hear from you."

@@ -1,9 +1,109 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+/* ─── Palette ─────────────────────────────────────────── */
+@theme {
+  --color-peach-glow-50: #fff1e5;
+  --color-peach-glow-100: #ffe2cc;
+  --color-peach-glow-200: #ffc599;
+  --color-peach-glow-300: #ffa866;
+  --color-peach-glow-400: #ff8b33;
+  --color-peach-glow-500: #ff6e00;
+  --color-peach-glow-600: #cc5800;
+  --color-peach-glow-700: #994200;
+  --color-peach-glow-800: #662c00;
+  --color-peach-glow-900: #331600;
+  --color-peach-glow-950: #240f00;
+
+  --color-frozen-water-50: #eafaf9;
+  --color-frozen-water-100: #d6f5f3;
+  --color-frozen-water-200: #acece7;
+  --color-frozen-water-300: #83e2dc;
+  --color-frozen-water-400: #5ad8d0;
+  --color-frozen-water-500: #30cfc4;
+  --color-frozen-water-600: #27a59d;
+  --color-frozen-water-700: #1d7c76;
+  --color-frozen-water-800: #13534e;
+  --color-frozen-water-900: #0a2927;
+  --color-frozen-water-950: #071d1b;
+
+  --color-floral-white-50: #fff3e5;
+  --color-floral-white-100: #ffe7cc;
+  --color-floral-white-200: #ffcf99;
+  --color-floral-white-300: #ffb866;
+  --color-floral-white-400: #ffa033;
+  --color-floral-white-500: #ff8800;
+  --color-floral-white-600: #cc6d00;
+  --color-floral-white-700: #995200;
+  --color-floral-white-800: #663600;
+  --color-floral-white-900: #331b00;
+  --color-floral-white-950: #241300;
+
+  --color-ink-black-50: #e5fffe;
+  --color-ink-black-100: #ccfffc;
+  --color-ink-black-200: #99fffa;
+  --color-ink-black-300: #66fff7;
+  --color-ink-black-400: #33fff5;
+  --color-ink-black-500: #00fff2;
+  --color-ink-black-600: #00ccc2;
+  --color-ink-black-700: #009991;
+  --color-ink-black-800: #006661;
+  --color-ink-black-900: #003330;
+  --color-ink-black-950: #002422;
+
+  --color-twitter-blue-50: #e5f5ff;
+  --color-twitter-blue-100: #ccebff;
+  --color-twitter-blue-200: #99d8ff;
+  --color-twitter-blue-300: #66c4ff;
+  --color-twitter-blue-400: #33b1ff;
+  --color-twitter-blue-500: #009dff;
+  --color-twitter-blue-600: #007ecc;
+  --color-twitter-blue-700: #005e99;
+  --color-twitter-blue-800: #003f66;
+  --color-twitter-blue-900: #001f33;
+  --color-twitter-blue-950: #001624;
+
+  /* ─── Semantic aliases ─────────────────────────────────── */
+  /* Change these to reorder the entire site's color scheme  */
+
+  /* Buttons */
+  --color-primary: var(--color-twitter-blue-500);
+  --color-primary-dark: var(--color-twitter-blue-600);
+  --color-primary-light: var(--color-twitter-blue-100);
+  --color-primary-muted: var(--color-twitter-blue-50);
+
+  /* Text */
+  --color-text: var(--color-ink-black-900);
+  --color-text-muted: var(--color-ink-black-700);
+  --color-text-light: var(--color-ink-black-500);
+
+  /* Banners (hero, CTA sections) */
+  --color-banner: var(--color-peach-glow-200);
+  --color-banner-dark: var(--color-peach-glow-200);
+  --color-banner-light: var(--color-peach-glow-100);
+
+  /* Secondary / accents */
+  --color-secondary: var(--color-frozen-water-500);
+  --color-secondary-dark: var(--color-frozen-water-600);
+  --color-secondary-light: var(--color-frozen-water-100);
+
+  --color-accent: var(--color-ink-black-500);
+
+  /* Surfaces */
+  --color-bg: var(--color-floral-white-50);
+  --color-surface: #ffffff;
+  --color-surface-alt: var(--color-floral-white-100);
+
+  --color-border: var(--color-ink-black-200);
+
+  --font-display: "Quicksand", sans-serif;
+  --font-body: system-ui, sans-serif;
+}
+
+/* ─── Base ─────────────────────────────────────────────── */
 @layer base {
   body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
   }
 }

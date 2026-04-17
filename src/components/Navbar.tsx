@@ -4,17 +4,18 @@ import { useState } from "react";
 import Link from "next/link";
 import { useTheme } from "@/components/ThemeProvider";
 import { navLinks } from "@/data/navLinks";
+import { brand } from "@/config/brand";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className="bg-surface shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-indigo-600">PeakCraft</span>
+            <span className="text-2xl font-bold text-banner">{brand.name}</span>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -22,7 +23,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-indigo-600 font-medium transition-colors"
+                className="text-text hover:text-banner font-medium transition-colors"
               >
                 {link.label}
               </Link>
@@ -30,7 +31,7 @@ export default function Navbar() {
 
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+              className="p-2 rounded-lg bg-surface-alt text-text-muted hover:bg-secondary-light hover:text-secondary-dark transition-colors"
               aria-label="Toggle dark mode"
             >
               {theme === "light" ? (
@@ -47,7 +48,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-gray-700"
+            className="md:hidden p-2 text-text"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
@@ -64,21 +65,21 @@ export default function Navbar() {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t">
+        <div className="md:hidden bg-surface border-t border-border">
           <div className="px-4 py-3 space-y-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="block text-gray-700 hover:text-indigo-600 font-medium py-2"
+                className="block text-text hover:text-banner font-medium py-2"
               >
                 {link.label}
               </Link>
             ))}
             <button
               onClick={toggleTheme}
-              className="flex items-center gap-2 text-gray-700 hover:text-indigo-600 font-medium py-2 w-full"
+              className="flex items-center gap-2 text-text hover:text-banner font-medium py-2 w-full"
             >
               {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
             </button>
