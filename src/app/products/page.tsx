@@ -4,19 +4,21 @@ import { products } from "@/data/products";
 
 export default function ProductsPage() {
   return (
-    <div className="bg-bg min-h-screen">
+    <div className="min-h-screen bg-white">
       <PageHeader
         title="Our Products"
         subtitle="Browse our collection of premium 3D printed items."
       />
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (
-            <ProductCard key={product.id} {...product} />
+            <ProductCard key={product.slug} product={product} />
           ))}
         </div>
-        <div className="mt-12 text-center bg-banner-light rounded-xl p-8">
-          <p className="text-banner-dark font-medium">More products coming soon! Contact us for custom orders.</p>
+        <div className="mt-12 rounded-xl bg-blue-50 p-8 text-center">
+          <p className="font-medium text-blue-900">
+            More products coming soon! Contact us for custom orders.
+          </p>
         </div>
       </section>
     </div>

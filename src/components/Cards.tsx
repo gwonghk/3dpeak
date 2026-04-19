@@ -1,28 +1,64 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Product } from "@/data/products";
 
-interface ProductCardProps extends Product {}
+interface ProductCardProps {
+  product: Product;
+}
 
-export function ProductCard({ name, description, price, category, imageUrl }: ProductCardProps) {
+function formatPrice(cents: number): string {
+  return new Intl.NumberFormat("en-CA", {
+    style: "currency",
+    currency: "CAD",
+  }).format(cents / 100);
+}
+
+export function ProductCard({ product }: ProductCardProps) {
+  const [primaryImage] = product.images;
+
   return (
-    <div className="bg-surface rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-      <div className="bg-surface-alt border-2 border-dashed border-border rounded-t-xl h-64 flex items-center justify-center">
-        {imageUrl ? (
-          <img src={imageUrl} alt={`${name} - ${category}`} className="w-full h-full object-cover" />
+    <Link
+      href={`/products/${product.slug}`}
+      className="group block overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow"
+    >
+      {/* Image */}
+      <div className="relative aspect-square overflow-hidden bg-gray-100">
+        {primaryImage ? (
+          <Image
+            src={primaryImage}
+            alt={product.title}
+            width={400}
+            height={400}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            unoptimized
+          />
         ) : (
-          <span className="text-text-muted text-sm">Image coming soon</span>
+          <div className="flex h-full w-full items-center justify-center text-gray-400 text-sm">
+            No image
+          </div>
         )}
       </div>
-      <div className="p-6">
-        <span className="text-xs font-medium text-secondary uppercase tracking-wider">{category}</span>
-        <h3 className="text-xl font-semibold text-text mt-2 mb-2">{name}</h3>
-        <p className="text-text-muted text-sm mb-4">{description}</p>
-        <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold text-text">{price}</span>
-          <Link href="/contact" className="text-primary hover:text-primary-dark font-medium text-sm">Inquire →</Link>
+
+      {/* Content */}
+      <div className="p-5">
+        <span className="text-xs font-medium uppercase tracking-wide text-blue-600">
+          {product.category}
+        </span>
+        <h3 className="mt-1.5 text-lg font-semibold text-gray-900 transition-colors group-hover:text-blue-700">
+          {product.title}
+        </h3>
+        <p className="mt-1 text-sm text-gray-500 line-clamp-2">{product.tagline}</p>
+        <div className="mt-4 flex items-center justify-between">
+          <span className="text-lg font-bold text-gray-900">
+            {formatPrice(product.price)}
+          </span>
+          {!product.inStock && (
+            <span className="text-xs font-medium text-red-600">Out of Stock</span>
+          )}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -33,9 +69,9 @@ interface InfoCardProps {
 
 export function InfoCard({ title, content }: InfoCardProps) {
   return (
-    <div className="bg-surface rounded-xl shadow-sm p-8">
-      <h3 className="text-xl font-semibold text-text mb-4">{title}</h3>
-      <p className="text-text-muted">{content}</p>
+    <div className="rounded-xl bg-white p-8 shadow-sm">
+      <h3 className="mb-4 text-xl font-semibold text-gray-900">{title}</h3>
+      <p className="text-gray-500">{content}</p>
     </div>
   );
 }
