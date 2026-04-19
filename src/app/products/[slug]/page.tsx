@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getProductBySlug, products } from "@/data/products";
+import { brand } from "@/config/brand";
 import ProductGallery from "@/components/ProductGallery";
 import ProductInfo from "@/components/ProductInfo";
 import ProductSpecs from "@/components/ProductSpecs";
@@ -17,9 +18,26 @@ export async function generateMetadata({ params }: ProductPageProps) {
   const { slug } = await params;
   const product = getProductBySlug(slug);
   if (!product) return { title: "Product Not Found" };
+
+  const images = product.images[0] ? [{ url: product.images[0], width: 600, height: 600 }] : [];
+
   return {
     title: `${product.title} — 3D Peak`,
-    description: product.tagline,
+    description: product.description,
+    openGraph: {
+      title: product.title,
+      description: product.tagline,
+      url: `${brand.url}/products/${product.slug}`,
+      siteName: brand.name,
+      images,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: product.title,
+      description: product.tagline,
+      images: product.images[0] ? [product.images[0]] : [],
+    },
   };
 }
 
