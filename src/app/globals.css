@@ -2,96 +2,95 @@
 
 /* ─── Palette ─────────────────────────────────────────── */
 @theme {
-  --color-peach-glow-50: #fff1e5;
-  --color-peach-glow-100: #ffe2cc;
-  --color-peach-glow-200: #ffc599;
-  --color-peach-glow-300: #ffa866;
-  --color-peach-glow-400: #ff8b33;
-  --color-peach-glow-500: #ff6e00;
-  --color-peach-glow-600: #cc5800;
-  --color-peach-glow-700: #994200;
-  --color-peach-glow-800: #662c00;
-  --color-peach-glow-900: #331600;
-  --color-peach-glow-950: #240f00;
+  --color-fiery-terracotta-50: #fcece8;
+  --color-fiery-terracotta-100: #f9d8d2;
+  --color-fiery-terracotta-200: #f3b2a5;
+  --color-fiery-terracotta-300: #ed8b78;
+  --color-fiery-terracotta-400: #e8654a;
+  --color-fiery-terracotta-500: #e23e1d;
+  --color-fiery-terracotta-600: #b53217;
+  --color-fiery-terracotta-700: #872512;
+  --color-fiery-terracotta-800: #5a190c;
+  --color-fiery-terracotta-900: #2d0c06;
+  --color-fiery-terracotta-950: #200904;
 
-  --color-frozen-water-50: #eafaf9;
-  --color-frozen-water-100: #d6f5f3;
-  --color-frozen-water-200: #acece7;
-  --color-frozen-water-300: #83e2dc;
-  --color-frozen-water-400: #5ad8d0;
-  --color-frozen-water-500: #30cfc4;
-  --color-frozen-water-600: #27a59d;
-  --color-frozen-water-700: #1d7c76;
-  --color-frozen-water-800: #13534e;
-  --color-frozen-water-900: #0a2927;
-  --color-frozen-water-950: #071d1b;
+  --color-sunflower-gold-50: #fdf6e7;
+  --color-sunflower-gold-100: #fceecf;
+  --color-sunflower-gold-200: #f8dca0;
+  --color-sunflower-gold-300: #f5cb70;
+  --color-sunflower-gold-400: #f2ba40;
+  --color-sunflower-gold-500: #eea811;
+  --color-sunflower-gold-600: #bf870d;
+  --color-sunflower-gold-700: #8f650a;
+  --color-sunflower-gold-800: #5f4307;
+  --color-sunflower-gold-900: #302203;
+  --color-sunflower-gold-950: #211802;
 
-  --color-floral-white-50: #fff3e5;
-  --color-floral-white-100: #ffe7cc;
-  --color-floral-white-200: #ffcf99;
-  --color-floral-white-300: #ffb866;
-  --color-floral-white-400: #ffa033;
-  --color-floral-white-500: #ff8800;
-  --color-floral-white-600: #cc6d00;
-  --color-floral-white-700: #995200;
-  --color-floral-white-800: #663600;
-  --color-floral-white-900: #331b00;
-  --color-floral-white-950: #241300;
+  --color-vanilla-cream-50: #f9f6eb;
+  --color-vanilla-cream-100: #f3ecd8;
+  --color-vanilla-cream-200: #e7dab1;
+  --color-vanilla-cream-300: #dbc78a;
+  --color-vanilla-cream-400: #cfb463;
+  --color-vanilla-cream-500: #c3a13c;
+  --color-vanilla-cream-600: #9c8130;
+  --color-vanilla-cream-700: #756124;
+  --color-vanilla-cream-800: #4e4118;
+  --color-vanilla-cream-900: #27200c;
+  --color-vanilla-cream-950: #1b1708;
 
-  --color-ink-black-50: #e5fffe;
-  --color-ink-black-100: #ccfffc;
-  --color-ink-black-200: #99fffa;
-  --color-ink-black-300: #66fff7;
-  --color-ink-black-400: #33fff5;
-  --color-ink-black-500: #00fff2;
-  --color-ink-black-600: #00ccc2;
-  --color-ink-black-700: #009991;
-  --color-ink-black-800: #006661;
-  --color-ink-black-900: #003330;
-  --color-ink-black-950: #002422;
+  --color-ink-black-50: #eef3f7;
+  --color-ink-black-100: #dce6ef;
+  --color-ink-black-200: #b9cedf;
+  --color-ink-black-300: #96b5cf;
+  --color-ink-black-400: #739dbf;
+  --color-ink-black-500: #5084af;
+  --color-ink-black-600: #406a8c;
+  --color-ink-black-700: #304f69;
+  --color-ink-black-800: #203546;
+  --color-ink-black-900: #101a23;
+  --color-ink-black-950: #0b1318;
 
-  --color-twitter-blue-50: #e5f5ff;
-  --color-twitter-blue-100: #ccebff;
-  --color-twitter-blue-200: #99d8ff;
-  --color-twitter-blue-300: #66c4ff;
-  --color-twitter-blue-400: #33b1ff;
-  --color-twitter-blue-500: #009dff;
-  --color-twitter-blue-600: #007ecc;
-  --color-twitter-blue-700: #005e99;
-  --color-twitter-blue-800: #003f66;
-  --color-twitter-blue-900: #001f33;
-  --color-twitter-blue-950: #001624;
+  --color-alice-blue-50: #e7eefe;
+  --color-alice-blue-100: #cedefd;
+  --color-alice-blue-200: #9dbcfb;
+  --color-alice-blue-300: #6c9bf9;
+  --color-alice-blue-400: #3b7af7;
+  --color-alice-blue-500: #0a58f5;
+  --color-alice-blue-600: #0847c4;
+  --color-alice-blue-700: #063593;
+  --color-alice-blue-800: #042362;
+  --color-alice-blue-900: #021231;
+  --color-alice-blue-950: #010c22;
 
   /* ─── Semantic aliases ─────────────────────────────────── */
   /* Change these to reorder the entire site's color scheme  */
 
   /* Buttons */
-  --color-primary: var(--color-twitter-blue-500);
-  --color-primary-dark: var(--color-twitter-blue-600);
-  --color-primary-light: var(--color-twitter-blue-100);
-  --color-primary-muted: var(--color-twitter-blue-50);
+  --color-primary: var(--color-sunflower-gold-500);
+  --color-primary-light: var(--color-sunflower-gold-100);
+  --color-primary-dark: var(--color-sunflower-gold-900);
+  --color-primary-muted: var(--color-sunflower-gold-400);
 
   /* Text */
-  --color-text: var(--color-ink-black-900);
+  --color-body: var(--color-ink-black-900);
   --color-text-muted: var(--color-ink-black-700);
   --color-text-light: var(--color-ink-black-500);
 
   /* Banners (hero, CTA sections) */
-  --color-banner: var(--color-peach-glow-200);
-  --color-banner-dark: var(--color-peach-glow-200);
-  --color-banner-light: var(--color-peach-glow-100);
+  --color-hero: var(--color-sunflower-gold-200);
+  --color-hero-dark: var(--color-ink-black-800);
+  --color-hero-light: var(--color-ink-black-100);
 
   /* Secondary / accents */
-  --color-secondary: var(--color-frozen-water-500);
-  --color-secondary-dark: var(--color-frozen-water-600);
-  --color-secondary-light: var(--color-frozen-water-100);
+  --color-secondary: var(--color-alice-blue-500);
+  --color-secondary-dark: var(--color-alice-blue-600);
+  --color-secondary-light: var(--color-alice-blue-100);
 
-  --color-accent: var(--color-ink-black-500);
+  /* --color-accent: var(--color-ink-black-500); */
 
   /* Surfaces */
-  --color-bg: var(--color-floral-white-50);
-  --color-surface: #ffffff;
-  --color-surface-alt: var(--color-floral-white-100);
+  --color-surface: var(--color-alice-blue-50);
+  --color-surface-alt: var(--color-vanilla-cream-100);
 
   --color-border: var(--color-ink-black-200);
 
@@ -103,7 +102,7 @@
 @layer base {
   body {
     font-family: var(--font-body);
-    background-color: var(--color-bg);
-    color: var(--color-text);
+    background-color: var(--color-surface);
+    color: var(--color-body);
   }
 }

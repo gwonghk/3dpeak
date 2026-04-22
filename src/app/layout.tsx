@@ -23,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${quicksand.variable} min-h-full flex flex-col antialiased bg-bg text-text`}>
+      <body
+        className={`${quicksand.variable} min-h-full flex flex-col antialiased bg-surface text-body`}
+      >
         <ThemeProvider>
           <Navbar />
           <main className="flex-1">{children}</main>

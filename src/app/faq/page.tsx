@@ -10,7 +10,7 @@ export default function FaqPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="bg-bg min-h-screen">
+    <div className="bg-surface min-h-screen">
       <PageHeader
         title="Frequently Asked Questions"
         subtitle={`Everything you need to know about ${brand.name}.`}
@@ -21,14 +21,19 @@ export default function FaqPage() {
             <div key={index}>
               <h3>
                 <button
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  onClick={() =>
+                    setOpenIndex(openIndex === index ? null : index)
+                  }
                   aria-expanded={openIndex === index}
                   aria-controls={`faq-answer-${index}`}
                   id={`faq-question-${index}`}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-surface-alt transition-colors"
                 >
-                  <span className="font-medium text-text">{faq.question}</span>
-                  <span className="ml-4 text-primary text-xl font-bold" aria-hidden="true">
+                  <span className="font-medium text-body">{faq.question}</span>
+                  <span
+                    className="ml-4 text-primary text-xl font-bold"
+                    aria-hidden="true"
+                  >
                     {openIndex === index ? "−" : "+"}
                   </span>
                 </button>
@@ -37,16 +42,27 @@ export default function FaqPage() {
                 id={`faq-answer-${index}`}
                 role="region"
                 aria-labelledby={`faq-question-${index}`}
-                className={openIndex === index ? "px-6 pb-4 pt-2 text-text-muted leading-relaxed" : "hidden"}
+                className={
+                  openIndex === index
+                    ? "px-6 pb-4 pt-2 text-body-muted leading-relaxed"
+                    : "hidden"
+                }
               >
                 {faq.answer}
               </div>
             </div>
           ))}
         </div>
-        <div className="mt-12 text-center bg-banner-light rounded-xl p-8">
-          <p className="text-banner-dark font-medium mb-4">Still have questions? We&apos;re happy to help.</p>
-          <Link href="/contact" className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors inline-block">Contact Us</Link>
+        <div className="mt-12 text-center bg-hero-light rounded-xl p-8">
+          <p className="text-hero-dark font-medium mb-4">
+            Still have questions? We&apos;re happy to help.
+          </p>
+          <Link
+            href="/contact"
+            className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors inline-block"
+          >
+            Contact Us
+          </Link>
         </div>
       </section>
     </div>
