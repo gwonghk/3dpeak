@@ -62,6 +62,8 @@
   --color-alice-blue-900: #021231;
   --color-alice-blue-950: #010c22;
 
+  --color-white: #ffffff;
+
   /* ─── Semantic aliases ─────────────────────────────────── */
   /* Change these to reorder the entire site's color scheme  */
 
@@ -72,14 +74,14 @@
   --color-primary-muted: var(--color-sunflower-gold-400);
 
   /* Text */
-  --color-body: var(--color-ink-black-900);
+  --color-black: var(--color-ink-black-900);
   --color-text-muted: var(--color-ink-black-700);
   --color-text-light: var(--color-ink-black-500);
 
   /* Banners (hero, CTA sections) */
-  --color-hero: var(--color-sunflower-gold-200);
-  --color-hero-dark: var(--color-ink-black-800);
+  --color-on-primary: var(--color-ink-black-800);
   --color-hero-light: var(--color-ink-black-100);
+  --color-banner-yellow: var(--color-sunflower-gold-100);
 
   /* Secondary / accents */
   --color-secondary: var(--color-alice-blue-500);
@@ -89,20 +91,21 @@
   /* --color-accent: var(--color-ink-black-500); */
 
   /* Surfaces */
-  --color-surface: var(--color-alice-blue-50);
-  --color-surface-alt: var(--color-vanilla-cream-100);
+  --color-background: var(--color-white);
+  --color-surface-pale-blue: var(--color-alice-blue-50);
+  --color-surface-cream: var(--color-vanilla-cream-50);
 
-  --color-border: var(--color-ink-black-200);
+  --color-border-black: var(--color-ink-black-200);
 
   --font-display: "Quicksand", sans-serif;
-  --font-body: system-ui, sans-serif;
+  --font-black: system-ui, sans-serif;
 }
 
 /* ─── Base ─────────────────────────────────────────────── */
 @layer base {
   body {
-    font-family: var(--font-body);
+    font-family: var(--font-black);
     background-color: var(--color-surface);
-    color: var(--color-body);
+    color: var(--color-black);
   }
 }

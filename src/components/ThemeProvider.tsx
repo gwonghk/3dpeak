@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useSyncExternalStore } from "react";
 
 type Theme = "light" | "dark";
 
@@ -18,22 +18,43 @@ export function useTheme() {
   return useContext(ThemeContext);
 }
 
+// Prevent hydration mismatch — theme is read before React mounts
+const STORAGE_KEY = "peakcraft-theme";
+const RE_RENDER_EVENT = "peakcraft-theme-change";
+
+function getSnapshot(): Theme {
+  if (typeof window === "undefined") return "light";
+  return (localStorage.getItem(STORAGE_KEY) as Theme) || "light";
+}
+
+function getServerSnapshot(): Theme {
+  return "light";
+}
+
+function subscribe(callback: () => void) {
+  const storageHandler = (e: StorageEvent) => {
+    if (e.key === STORAGE_KEY) callback();
+  };
+  const customHandler = () => callback();
+  window.addEventListener("storage", storageHandler);
+  window.addEventListener(RE_RENDER_EVENT, customHandler);
+  return () => {
+    window.removeEventListener("storage", storageHandler);
+    window.removeEventListener(RE_RENDER_EVENT, customHandler);
+  };
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("light");
+  const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   useEffect(() => {
-    const saved = localStorage.getItem("peakcraft-theme") as Theme | null;
-    if (saved) {
-      setTheme(saved);
-      document.documentElement.classList.toggle("dark", saved === "dark");
-    }
-  }, []);
+    document.documentElement.classList.toggle("dark", theme === "dark");
+  }, [theme]);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    localStorage.setItem("peakcraft-theme", newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
+    localStorage.setItem(STORAGE_KEY, newTheme);
+    window.dispatchEvent(new Event(RE_RENDER_EVENT));
   };
 
   return (

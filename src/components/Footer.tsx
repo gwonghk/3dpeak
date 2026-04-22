@@ -39,7 +39,7 @@ export default function Footer() {
             <p className="text-ink-black-600 text-sm">Get in touch with us:</p>
             <Link
               href="/contact"
-              className="mt-2 inline-block text-hero hover:text-hero-dark transition-colors text-sm font-medium"
+              className="mt-2 inline-block text-hero hover:text-on-primary transition-colors text-sm font-medium"
             >
               Contact Page →
             </Link>
@@ -47,7 +47,9 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-ink-black-800 mt-8 pt-8 text-center text-sm text-ink-black-700">
-          <p>&copy; {new Date().getFullYear()} {brand.name}. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} {brand.name}. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

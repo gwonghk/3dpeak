@@ -1,32 +1,28 @@
 export const homeContent = {
   hero: {
-    headline: "Crafted with Precision.",
-    subheadline: "Printed with Passion.",
-    description:
-      "Premium 3D printed items for collectors, creators, and curious minds. Every piece crafted with care.",
-    browseCta: "Browse Products",
-    aboutCta: "About Us",
+    headline: "Precision Printed",
+    subheadline: "Hand Crafted",
+    description: "Curious collectables for play",
+    browseCta: "Check it out",
+    subscribeCta: "Get Updates",
   },
   features: {
     heading: "Why PeakCraft?",
     items: [
       {
         icon: "🎨",
-        title: "Custom Designs",
-        description:
-          "Want something unique? We can bring your ideas to life with custom 3D printing.",
+        title: "Curated Curiosities",
+        description: "Choice designs, 3D printed, hand finished.",
       },
       {
         icon: "✨",
-        title: "Premium Quality",
-        description:
-          "High-resolution printing with premium materials for detailed, durable results.",
+        title: "Precision Printed",
+        description: "Printed with premium materials for detailed designs.",
       },
       {
-        icon: "🚚",
-        title: "Fast Turnaround",
-        description:
-          "Quick production times without sacrificing quality. Most orders ship within days.",
+        icon: "🚚🇨🇦",
+        title: "Canada Wide Shipping",
+        description: "Made in Canada, for Canadians.",
       },
     ],
   },

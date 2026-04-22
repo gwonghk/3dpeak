@@ -10,13 +10,13 @@ export default function FaqPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="bg-surface min-h-screen">
+    <div className="bg-surface-pale-blue min-h-screen">
       <PageHeader
         title="Frequently Asked Questions"
         subtitle={`Everything you need to know about ${brand.name}.`}
       />
       <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-surface rounded-xl shadow-sm divide-y divide-border">
+        <div className="bg-surface-pale-blue rounded-xl shadow-sm divide-y divide-border-black">
           {faqs.map((faq, index) => (
             <div key={index}>
               <h3>
@@ -27,9 +27,11 @@ export default function FaqPage() {
                   aria-expanded={openIndex === index}
                   aria-controls={`faq-answer-${index}`}
                   id={`faq-question-${index}`}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-surface-alt transition-colors"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-background transition-colors"
                 >
-                  <span className="font-medium text-body">{faq.question}</span>
+                  <span className="font-medium text-on-primary">
+                    {faq.question}
+                  </span>
                   <span
                     className="ml-4 text-primary text-xl font-bold"
                     aria-hidden="true"
@@ -44,7 +46,7 @@ export default function FaqPage() {
                 aria-labelledby={`faq-question-${index}`}
                 className={
                   openIndex === index
-                    ? "px-6 pb-4 pt-2 text-body-muted leading-relaxed"
+                    ? "px-6 pb-4 pt-2 text-on-primary-muted leading-relaxed"
                     : "hidden"
                 }
               >
@@ -54,7 +56,7 @@ export default function FaqPage() {
           ))}
         </div>
         <div className="mt-12 text-center bg-hero-light rounded-xl p-8">
-          <p className="text-hero-dark font-medium mb-4">
+          <p className="text-on-primary font-medium mb-4">
             Still have questions? We&apos;re happy to help.
           </p>
           <Link
