@@ -67,35 +67,38 @@
   /* ─── Semantic aliases ─────────────────────────────────── */
   /* Change these to reorder the entire site's color scheme  */
 
-  /* Buttons */
+  /* Colors */
   --color-primary: var(--color-sunflower-gold-500);
-  --color-primary-light: var(--color-sunflower-gold-100);
-  --color-primary-dark: var(--color-sunflower-gold-900);
-  --color-primary-muted: var(--color-sunflower-gold-400);
-
-  /* Text */
-  --color-black: var(--color-ink-black-900);
-  --color-text-muted: var(--color-ink-black-700);
-  --color-text-light: var(--color-ink-black-500);
-
-  /* Banners (hero, CTA sections) */
-  --color-on-primary: var(--color-ink-black-800);
-  --color-hero-light: var(--color-ink-black-100);
-  --color-banner-yellow: var(--color-sunflower-gold-100);
-
-  /* Secondary / accents */
+  /* primary variant */
   --color-secondary: var(--color-alice-blue-500);
-  --color-secondary-dark: var(--color-alice-blue-600);
-  --color-secondary-light: var(--color-alice-blue-100);
-
-  /* --color-accent: var(--color-ink-black-500); */
+  /* secondary variant */
 
   /* Surfaces */
   --color-background: var(--color-white);
   --color-surface-pale-blue: var(--color-alice-blue-50);
   --color-surface-cream: var(--color-vanilla-cream-50);
 
+  /* Borders */
   --color-border-black: var(--color-ink-black-200);
+
+  /* Text */
+  --color-on-primary: var(--color-ink-black-800);
+  --color-on-secondary: var(--color-ink-black-400);
+
+  /* Phase out below */
+  /* Buttons */
+  --color-primary-dark: var(--color-sunflower-gold-900);
+  --color-primary-muted: var(--color-sunflower-gold-400);
+
+  /* Banners (hero, CTA sections) */
+  --color-hero-light: var(--color-ink-black-100);
+  --color-banner-yellow: var(--color-sunflower-gold-100);
+
+  /* Secondary / accents */
+  --color-secondary-dark: var(--color-alice-blue-600);
+  --color-secondary-light: var(--color-alice-blue-100);
+
+  /* --color-accent: var(--color-ink-black-500); */
 
   --font-display: "Quicksand", sans-serif;
   --font-black: system-ui, sans-serif;

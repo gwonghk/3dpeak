@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { navLinks } from "@/data/navLinks";
 import { brand } from "@/config/brand";
+import NavLink from "./NavLink";
 
 export default function Footer() {
   return (
@@ -21,12 +22,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-ink-black-400 hover:text-hero transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  <NavLink link={link} variant="footer" />
                 </li>
               ))}
             </ul>

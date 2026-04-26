@@ -19,11 +19,7 @@ export const products: Product[] = [
     description:
       "Capture the essence of your beloved pet with this custom 3D-printed paw print pendant. Each piece is meticulously crafted to preserve every whisker detail, creating a timeless treasure you'll cherish for years to come. Made from biodegradable PLA filament, it's lightweight yet durable enough for everyday wear.",
     modelUrl: "/models/begging-shiba.glb",
-    images: [
-      "https://placehold.co/600x600/e2e8f0/1e293b?text=Paw+Pendant+Front",
-      "https://placehold.co/600x600/e2e8f0/1e293b?text=Paw+Pendant+Side",
-      "https://placehold.co/600x600/e2e8f0/1e293b?text=Paw+Pendant+Back",
-    ],
+    images: ["/pics/shiba1.jpeg", "/pics/shiba2.jpeg", "/pics/shiba1.jpeg"],
     specs: {
       Material: "PLA (polylactic acid)",
       Weight: "8g",
@@ -79,6 +75,25 @@ export const products: Product[] = [
     price: 3499,
     category: "Pet Care",
     inStock: false,
+  },
+  {
+    slug: "pencil-holder",
+    title: "Articulated Pencil Holder",
+    tagline: "Flexibility meets function on your desk",
+    description:
+      "Keep your pencils, pens, and markers exactly where you want them with this articulated pencil holder. The flexible joint lets you pose the holder to fit your desk layout, while the weighted base keeps it stable even when fully loaded. A satisfying mix of utility and print-in-place engineering.",
+    modelUrl: "/models/pencil_flexure_joint.glb",
+    images: ["/pics/shiba1.jpeg", "/pics/shiba2.jpeg"],
+    specs: {
+      Material: "PLA Plus",
+      Weight: "62g",
+      Dimensions: "100mm × 80mm × 40mm",
+      "Articulation Points": "3",
+      Finish: "Matte",
+    },
+    price: 3499,
+    category: "Desk Accessories",
+    inStock: true,
   },
 ];
 

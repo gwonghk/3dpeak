@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { navLinks } from "@/data/navLinks";
 import { brand } from "@/config/brand";
+import NavLink from "./NavLink";
 // import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
@@ -21,13 +22,7 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-on-primary hover:text-hero font-medium transition-colors"
-              >
-                {link.label}
-              </Link>
+              <NavLink key={link.href} link={link} variant="navbar" />
             ))}
             {/* TODO: Implement theme toggle */}
             {/* <ThemeToggle variant="icon" /> */}
@@ -75,14 +70,12 @@ export default function Navbar() {
         <div className="md:hidden bg-background border-t border-border-black">
           <div className="px-4 py-3 space-y-2">
             {navLinks.map((link) => (
-              <Link
+              <NavLink
                 key={link.href}
-                href={link.href}
+                link={link}
+                variant="mobile"
                 onClick={() => setIsMenuOpen(false)}
-                className="block text-on-primary hover:text-hero font-medium py-2"
-              >
-                {link.label}
-              </Link>
+              />
             ))}
             {/* TODO: Implement theme toggle */}
             {/* <ThemeToggle variant="text" /> */}
