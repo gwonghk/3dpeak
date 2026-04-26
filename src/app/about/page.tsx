@@ -1,6 +1,6 @@
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
-import { InfoCard } from "@/components/Cards";
+import { InfoCard } from "@/components/InfoCard";
 import { brand } from "@/config/brand";
 
 export default function AboutPage() {

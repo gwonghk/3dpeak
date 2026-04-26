@@ -1,5 +1,5 @@
 import PageHeader from "@/components/PageHeader";
-import { ProductCard } from "@/components/Cards";
+import { ProductCard } from "@/components/ProductCard";
 import { products } from "@/data/products";
 
 export default function ProductsPage() {

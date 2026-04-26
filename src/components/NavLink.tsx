@@ -7,7 +7,7 @@ interface NavLinkData {
 
 interface NavLinkProps {
   link: NavLinkData;
-  variant?: "onPrimary" | "onSecondary" | "mobile";
+  variant?: "onPrimary" | "onSecondary" | "mobile" | "footer" | "navbar";
   onClick?: () => void;
 }
 
@@ -16,6 +16,10 @@ const variantClasses = {
   onSecondary: "text-on-secondary hover:text-hero transition-colors",
   mobile:
     "block text-on-primary hover:text-hero font-medium py-2 transition-colors",
+  footer:
+    "text-on-primary hover:text-hero font-medium transition-colors text-sm",
+  navbar:
+    "text-on-primary hover:text-hero font-medium transition-colors text-sm",
 };
 
 export default function NavLink({
