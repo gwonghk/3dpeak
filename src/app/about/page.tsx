@@ -5,12 +5,12 @@ import { brand } from "@/config/brand";
 
 export default function AboutPage() {
   return (
-    <div className="bg-surface-container min-h-screen">
+    <div className="bg-background min-h-screen">
       <PageHeader title={`About ${brand.name}`} subtitle={brand.tagline} />
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-surface-container rounded-xl shadow-sm p-8 md:p-12">
-          <h2 className="text-3xl font-bold text-on-primary mb-6">Our Story</h2>
-          <div className="space-y-4 text-on-surface-container leading-relaxed">
+        <div className="bg-surface rounded-xl shadow-sm p-8 md:p-12">
+          <h2 className="text-3xl font-bold text-on-surface mb-6">Our Story</h2>
+          <div className="space-y-4 text-on-surface-variant leading-relaxed">
             <p>
               {brand.name} started with a simple idea: to take digital designs
               and transform them into real, tangible objects that people can
