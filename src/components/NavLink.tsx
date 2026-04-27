@@ -12,14 +12,14 @@ interface NavLinkProps {
 }
 
 const variantClasses = {
-  onPrimary: "text-on-primary hover:text-hero font-medium transition-colors",
-  onSecondary: "text-on-secondary hover:text-hero transition-colors",
+  onPrimary: "text-on-primary hover:text-primary transition-colors",
+  onSecondary: "text-on-secondary hover:text-secondary transition-colors",
   mobile:
-    "block text-on-primary hover:text-hero font-medium py-2 transition-colors",
+    "block text-on-primary hover:text-primary font-medium py-2 transition-colors",
   footer:
-    "text-on-primary hover:text-hero font-medium transition-colors text-sm",
+    "text-on-primary hover:text-primary transition-colors text-sm",
   navbar:
-    "text-on-primary hover:text-hero font-medium transition-colors text-sm",
+    "text-on-primary hover:text-primary transition-colors text-sm",
 };
 
 export default function NavLink({

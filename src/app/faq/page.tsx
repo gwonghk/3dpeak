@@ -10,13 +10,13 @@ export default function FaqPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="bg-surface-pale-blue min-h-screen">
+    <div className="bg-surface-container min-h-screen">
       <PageHeader
         title="Frequently Asked Questions"
         subtitle={`Everything you need to know about ${brand.name}.`}
       />
       <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-surface-pale-blue rounded-xl shadow-sm divide-y divide-border-black">
+        <div className="bg-surface-container rounded-xl shadow-sm divide-y divide-outline">
           {faqs.map((faq, index) => (
             <div key={index}>
               <h3>
@@ -46,7 +46,7 @@ export default function FaqPage() {
                 aria-labelledby={`faq-question-${index}`}
                 className={
                   openIndex === index
-                    ? "px-6 pb-4 pt-2 text-on-primary-muted leading-relaxed"
+                    ? "px-6 pb-4 pt-2 text-on-primary-container leading-relaxed"
                     : "hidden"
                 }
               >
@@ -55,13 +55,13 @@ export default function FaqPage() {
             </div>
           ))}
         </div>
-        <div className="mt-12 text-center bg-hero-light rounded-xl p-8">
+        <div className="mt-12 text-center bg-surface-container rounded-xl p-8">
           <p className="text-on-primary font-medium mb-4">
             Still have questions? We&apos;re happy to help.
           </p>
           <Link
             href="/contact"
-            className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors inline-block"
+            className="bg-primary text-on-primary px-8 py-3 rounded-lg font-semibold hover:opacity-80 transition-colors inline-block"
           >
             Contact Us
           </Link>

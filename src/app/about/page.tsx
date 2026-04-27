@@ -5,12 +5,12 @@ import { brand } from "@/config/brand";
 
 export default function AboutPage() {
   return (
-    <div className="bg-surface-pale-blue min-h-screen">
+    <div className="bg-surface-container min-h-screen">
       <PageHeader title={`About ${brand.name}`} subtitle={brand.tagline} />
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-surface-pale-blue rounded-xl shadow-sm p-8 md:p-12">
+        <div className="bg-surface-container rounded-xl shadow-sm p-8 md:p-12">
           <h2 className="text-3xl font-bold text-on-primary mb-6">Our Story</h2>
-          <div className="space-y-4 text-on-primary-muted leading-relaxed">
+          <div className="space-y-4 text-on-surface-container leading-relaxed">
             <p>
               {brand.name} started with a simple idea: to take digital designs
               and transform them into real, tangible objects that people can
@@ -40,13 +40,13 @@ export default function AboutPage() {
             content={`Every ${brand.name} item is crafted with precision, inspected for quality, and made to last. We stand behind our work.`}
           />
         </div>
-        <div className="mt-12 text-center bg-secondary-light rounded-xl p-8">
-          <p className="text-on-primary-muted mb-6">
+        <div className="mt-12 text-center bg-secondary-container rounded-xl p-8">
+          <p className="text-on-secondary-container mb-6">
             Interested in a custom project? We&apos;d love to hear from you.
           </p>
           <Link
             href="/contact"
-            className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors inline-block"
+            className="bg-primary text-on-primary px-8 py-3 rounded-lg font-semibold hover:opacity-80 transition-colors inline-block"
           >
             Get in Touch
           </Link>

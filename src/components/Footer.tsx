@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <span className="text-2xl font-bold text-hero">{brand.name}</span>
+            <span className="text-2xl font-bold text-primary">{brand.name}</span>
             <p className="mt-3 text-sm text-ink-black-600">
               Premium 3D printed items, crafted with precision and care.
             </p>
@@ -35,7 +35,7 @@ export default function Footer() {
             <p className="text-ink-black-600 text-sm">Get in touch with us:</p>
             <Link
               href="/contact"
-              className="mt-2 inline-block text-hero hover:text-on-primary transition-colors text-sm font-medium"
+              className="mt-2 inline-block text-primary hover:text-on-primary transition-colors text-sm font-medium"
             >
               Contact Page →
             </Link>

@@ -10,10 +10,10 @@ interface FeatureItemProps {
 
 function FeatureItem({ icon, title, description }: FeatureItemProps) {
   return (
-    <div className="bg-surface-cream border-border-black p-8 rounded-xl shadow-sm text-center">
+    <div className="bg-surface-container-low border-outline p-8 rounded-xl shadow-sm text-center">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-semibold text-on-primary mb-2">{title}</h3>
-      <p className="text-on-primary-muted">{description}</p>
+      <p className="text-on-primary-container">{description}</p>
     </div>
   );
 }

@@ -8,7 +8,7 @@ export default function CtaSection() {
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-bold text-on-primary mb-4">{heading}</h2>
-        <p className="text-on-primary-muted mb-8 max-w-xl mx-auto">
+        <p className="text-on-primary-container mb-8 max-w-xl mx-auto">
           {description}
         </p>
         <Button variant="primary" href="/products">

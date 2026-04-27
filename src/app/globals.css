@@ -64,42 +64,60 @@
 
   --color-white: #ffffff;
 
-  /* ─── Semantic aliases ─────────────────────────────────── */
-  /* Change these to reorder the entire site's color scheme  */
+  /* ─── Semantic aliases (Material 3) ───────────────────────── */
 
-  /* Colors */
+  /* ── Primary (Sunflower Gold) ── */
   --color-primary: var(--color-sunflower-gold-500);
-  /* primary variant */
+  --color-on-primary: var(--color-ink-black-950);
+  --color-primary-container: var(--color-sunflower-gold-100);
+  --color-on-primary-container: var(--color-sunflower-gold-900);
+
+  /* ── Secondary (Alice Blue) ── */
   --color-secondary: var(--color-alice-blue-500);
-  /* secondary variant */
+  --color-on-secondary: var(--color-ink-black-800);
+  --color-secondary-container: var(--color-alice-blue-100);
+  --color-on-secondary-container: var(--color-alice-blue-900);
 
-  /* Surfaces */
-  --color-background: var(--color-white);
-  --color-surface-pale-blue: var(--color-alice-blue-50);
-  --color-surface-cream: var(--color-vanilla-cream-50);
+  /* ── Tertiary / Accent (Fiery Terracotta) ── */
+  --color-tertiary: var(--color-fiery-terracotta-500);
+  --color-on-tertiary: var(--color-ink-black-800);
+  --color-tertiary-container: var(--color-fiery-terracotta-100);
+  --color-on-tertiary-container: var(--color-fiery-terracotta-900);
 
-  /* Borders */
-  --color-border-black: var(--color-ink-black-200);
+  /* ── Surfaces ── */
+  --color-background: var(--color-vanilla-cream-50);
+  --color-on-background: var(--color-ink-black-900);
+  --color-surface: var(--color-white);
+  --color-on-surface: var(--color-ink-black-900);
+  --color-surface-variant: var(--color-alice-blue-50);
+  --color-on-surface-variant: var(--color-ink-black-700);
+  --color-surface-container: var(--color-alice-blue-50);
+  --color-surface-container-high: var(--color-white);
+  --color-surface-container-low: var(--color-vanilla-cream-50);
+  --color-on-surface-container: var(--color-ink-black-800);
 
-  /* Text */
-  --color-on-primary: var(--color-ink-black-800);
-  --color-on-secondary: var(--color-ink-black-400);
+  /* ── Outline / Borders ── */
+  --color-outline: var(--color-ink-black-500);
+  --color-outline-variant: var(--color-ink-black-300);
 
-  /* Phase out below */
-  /* Buttons */
-  --color-primary-dark: var(--color-sunflower-gold-900);
-  --color-primary-muted: var(--color-sunflower-gold-400);
+  /* ── Error ── */
+  --color-error: #b3261e;
+  --color-on-error: var(--color-white);
+  --color-error-container: #f9ded9;
+  --color-on-error-container: #410e0b;
 
-  /* Banners (hero, CTA sections) */
-  --color-hero-light: var(--color-ink-black-100);
-  --color-banner-yellow: var(--color-sunflower-gold-100);
 
-  /* Secondary / accents */
-  --color-secondary-dark: var(--color-alice-blue-600);
-  --color-secondary-light: var(--color-alice-blue-100);
+  /* ── Inverse (modals, floating elements) ── */
+  --color-inverse-surface: var(--color-ink-black-900);
+  --color-inverse-on-surface: var(--color-ink-black-50);
+  --color-inverse-primary: var(--color-sunflower-gold-300);
 
-  /* --color-accent: var(--color-ink-black-500); */
+  /* ── Scrim ── */
+  --color-scrim: rgba(0, 0, 0, 0.32);
+  --color-scrim-light: rgba(0, 0, 0, 0.04);   /* subtle overlay */
+  --color-scrim-dark: rgba(0, 0, 0, 0.70);   /* badge backdrop */
 
+  /* ── Fonts ── */
   --font-display: "Quicksand", sans-serif;
   --font-black: system-ui, sans-serif;
 }

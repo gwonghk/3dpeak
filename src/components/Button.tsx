@@ -23,9 +23,9 @@ export default function Button({
     "px-8 py-3 rounded-lg font-semibold transition-colors inline-block text-center";
 
   const variantClasses = {
-    primary: "bg-primary text-primary-dark hover:bg-primary-muted",
+    primary: "bg-primary text-on-primary hover:opacity-80",
     secondary:
-      "border-2 border-primary text-primary hover:bg-primary-muted hover:text-primary",
+      "border-2 border-primary text-primary hover:bg-primary-container hover:text-on-primary-container",
   };
 
   const disabledClasses = "opacity-50 cursor-not-allowed";

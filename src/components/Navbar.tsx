@@ -67,7 +67,7 @@ export default function Navbar() {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-background border-t border-border-black">
+        <div className="md:hidden bg-background border-t border-outline">
           <div className="px-4 py-3 space-y-2">
             {navLinks.map((link) => (
               <NavLink

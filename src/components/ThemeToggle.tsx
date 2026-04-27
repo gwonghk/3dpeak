@@ -13,7 +13,7 @@ export default function ThemeToggle({ variant = "icon" }: ThemeToggleProps) {
     return (
       <button
         onClick={toggleTheme}
-        className="flex items-center gap-2 text-on-primary hover:text-hero font-medium py-2 w-full"
+        className="flex items-center gap-2 text-on-primary hover:text-primary font-medium py-2 w-full"
       >
         {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
       </button>
@@ -23,7 +23,7 @@ export default function ThemeToggle({ variant = "icon" }: ThemeToggleProps) {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-background text-on-primary-muted hover:bg-secondary-light hover:text-secondary-dark transition-colors"
+      className="p-2 rounded-lg bg-background text-on-primary-container hover:bg-secondary-container hover:text-on-secondary-container transition-colors"
       aria-label="Toggle dark mode"
     >
       {theme === "light" ? (
