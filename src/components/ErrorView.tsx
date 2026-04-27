@@ -8,7 +8,7 @@ export default function ErrorView({ reset }: ErrorViewProps) {
   return (
     <div className="flex flex-col items-center justify-center min-h-[50vh] px-4 text-center">
       <svg
-        className="w-12 h-12 text-fiery-terracotta-500 mb-4"
+        className="w-12 h-12 text-tertiary mb-4"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -23,13 +23,13 @@ export default function ErrorView({ reset }: ErrorViewProps) {
       <h2 className="text-xl font-semibold text-on-primary mb-2">
         Something went wrong
       </h2>
-      <p className="text-sm text-ink-black-400 mb-6 max-w-md">
+      <p className="text-sm text-on-surface-variant mb-6 max-w-md">
         We hit an unexpected snag. Your progress has been saved.
       </p>
       {reset && (
         <button
           onClick={reset}
-          className="px-4 py-2 bg-fiery-terracotta-500 text-white rounded-lg hover:bg-fiery-terracotta-600 transition-colors text-sm font-medium"
+          className="px-4 py-2 bg-tertiary text-on-tertiary rounded-lg hover:bg-tertiary/80 transition-colors text-sm font-medium"
         >
           Try again
         </button>

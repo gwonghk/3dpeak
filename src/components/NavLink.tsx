@@ -17,7 +17,7 @@ const variantClasses = {
   mobile:
     "block text-on-primary hover:text-primary font-medium py-2 transition-colors",
   footer:
-    "text-on-primary hover:text-primary transition-colors text-sm",
+    "text-inverse-on-surface hover:text-primary transition-colors text-sm",
   navbar:
     "text-on-primary hover:text-primary transition-colors text-sm",
 };
