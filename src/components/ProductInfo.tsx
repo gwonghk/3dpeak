@@ -15,18 +15,18 @@ export default function ProductInfo({ product }: ProductInfoProps) {
   return (
     <div className="flex flex-col gap-6">
       {/* Category */}
-      <span className="text-sm font-medium uppercase tracking-wide text-blue-600">
+      <span className="text-sm font-medium uppercase tracking-wide text-secondary">
         {product.category}
       </span>
 
       {/* Title */}
-      <h1 className="text-3xl font-bold text-gray-900">{product.title}</h1>
+      <h1 className="text-3xl font-bold text-on-surface">{product.title}</h1>
 
       {/* Tagline */}
-      <p className="text-lg text-gray-500">{product.tagline}</p>
+      <p className="text-lg text-on-surface-variant">{product.tagline}</p>
 
       {/* Price */}
-      <div className="text-2xl font-semibold text-gray-900">
+      <div className="text-2xl font-semibold text-on-surface">
         {formatPrice(product.price)}
       </div>
 
@@ -40,7 +40,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
             In Stock
           </span>
         ) : (
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-red-100 px-3 py-1 text-sm font-medium text-red-800">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-error-container px-3 py-1 text-sm font-medium text-on-error-container">
             Out of Stock
           </span>
         )}
@@ -54,7 +54,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
       {/* CTA */}
       <button
         disabled={!product.inStock}
-        className="mt-2 w-full rounded-lg bg-gray-900 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-gray-800 disabled:cursor-not-allowed disabled:bg-gray-300"
+        className="mt-2 w-full rounded-lg bg-inverse-surface px-6 py-3.5 text-sm font-semibold text-inverse-on-surface transition hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-40"
       >
         {product.inStock ? "Add to Cart" : "Out of Stock"}
       </button>

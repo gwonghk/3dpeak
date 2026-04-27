@@ -19,7 +19,7 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
   return (
     <div className="relative w-full">
       {/* Main image */}
-      <div className="relative aspect-square overflow-hidden rounded-xl bg-gray-100">
+      <div className="relative aspect-square overflow-hidden rounded-xl bg-surface-container">
         <Image
           src={images[current]}
           alt={`${alt} — image ${current + 1}`}
@@ -36,7 +36,7 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
             <button
               onClick={prev}
               aria-label="Previous image"
-              className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow hover:bg-white transition"
+              className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-surface-container-high p-2 shadow hover:bg-surface-container transition"
             >
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -45,7 +45,7 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
             <button
               onClick={next}
               aria-label="Next image"
-              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow hover:bg-white transition"
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-surface-container-high p-2 shadow hover:bg-surface-container transition"
             >
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -64,7 +64,7 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
               onClick={() => setCurrent(i)}
               aria-label={`Go to image ${i + 1}`}
               className={`h-2.5 w-2.5 rounded-full transition ${
-                i === current ? "bg-blue-600 w-6" : "bg-gray-300 hover:bg-gray-400"
+                i === current ? "bg-secondary w-6" : "bg-outline-variant hover:bg-outline"
               }`}
             />
           ))}

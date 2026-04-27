@@ -24,8 +24,8 @@ export default function ProductGallery({ title, images, modelUrl }: ProductGalle
             onClick={() => setView("image")}
             className={`rounded-md px-4 py-1.5 text-sm font-medium transition ${
               view === "image"
-                ? "bg-gray-900 text-white"
-                : "text-gray-600 hover:bg-gray-100"
+                ? "bg-inverse-surface text-inverse-on-surface"
+                : "text-on-surface-variant hover:bg-surface-container"
             }`}
           >
             Photos
@@ -34,8 +34,8 @@ export default function ProductGallery({ title, images, modelUrl }: ProductGalle
             onClick={() => setView("3d")}
             className={`rounded-md px-4 py-1.5 text-sm font-medium transition ${
               view === "3d"
-                ? "bg-gray-900 text-white"
-                : "text-gray-600 hover:bg-gray-100"
+                ? "bg-inverse-surface text-inverse-on-surface"
+                : "text-on-surface-variant hover:bg-surface-container"
             }`}
           >
             3D View

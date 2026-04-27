@@ -36,14 +36,14 @@ export default function ModelViewer({ modelUrl, alt, poster }: ModelViewerProps)
 
   if (!loaded) {
     return (
-      <div className="flex aspect-square items-center justify-center rounded-xl bg-gray-100">
-        <span className="text-sm text-gray-400">Loading 3D view...</span>
+      <div className="flex aspect-square items-center justify-center rounded-xl bg-surface-container">
+        <span className="text-sm text-on-surface-variant">Loading 3D view...</span>
       </div>
     );
   }
 
   return (
-    <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-gray-100">
+    <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-surface-container">
       {/* @ts-ignore */}
       <model-viewer
         ref={elRef as React.RefObject<HTMLElement>}

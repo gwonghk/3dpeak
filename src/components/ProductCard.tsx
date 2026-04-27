@@ -21,12 +21,12 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <Link
       href={`/products/${product.slug}`}
-      className="group block overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow"
+      className="group block overflow-hidden rounded-xl bg-surface shadow-sm hover:shadow-md transition-shadow"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       {/* Image */}
-      <div className="relative aspect-square overflow-hidden bg-gray-100">
+      <div className="relative aspect-square overflow-hidden bg-surface-container">
         <Image
           src={hovered ? secondImage : images[0]}
           alt={product.title}
@@ -43,21 +43,21 @@ export function ProductCard({ product }: ProductCardProps) {
 
       {/* Content */}
       <div className="p-5">
-        <span className="text-xs font-medium uppercase tracking-wide text-blue-600">
+        <span className="text-xs font-medium uppercase tracking-wide text-secondary">
           {product.category}
         </span>
-        <h3 className="mt-1.5 text-lg font-semibold text-gray-900 transition-colors group-hover:text-blue-700">
+        <h3 className="mt-1.5 text-lg font-semibold text-on-surface transition-colors group-hover:text-secondary">
           {product.title}
         </h3>
-        <p className="mt-1 text-sm text-gray-500 line-clamp-2">
+        <p className="mt-1 text-sm text-on-surface-variant line-clamp-2">
           {product.tagline}
         </p>
         <div className="mt-4 flex items-center justify-between">
-          <span className="text-lg font-bold text-gray-900">
+          <span className="text-lg font-bold text-on-surface">
             {formatPrice(product.price)}
           </span>
           {!product.inStock && (
-            <span className="text-xs font-medium text-red-600">
+            <span className="text-xs font-medium text-error">
               Out of Stock
             </span>
           )}

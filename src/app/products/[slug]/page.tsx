@@ -48,15 +48,15 @@ export default async function ProductPage({ params }: ProductPageProps) {
   if (!product) notFound();
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-surface">
       {/* Breadcrumb */}
       <div className="mx-auto max-w-7xl px-4 py-6">
-        <nav className="flex items-center gap-2 text-sm text-gray-500">
-          <Link href="/" className="hover:text-gray-900">Home</Link>
+        <nav className="flex items-center gap-2 text-sm text-on-surface-variant">
+          <Link href="/" className="hover:text-on-surface">Home</Link>
           <span>/</span>
-          <Link href="/products" className="hover:text-gray-900">Products</Link>
+          <Link href="/products" className="hover:text-on-surface">Products</Link>
           <span>/</span>
-          <span className="text-gray-900">{product.title}</span>
+          <span className="text-on-surface">{product.title}</span>
         </nav>
       </div>
 

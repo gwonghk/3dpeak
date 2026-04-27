@@ -4,7 +4,7 @@ import { products } from "@/data/products";
 
 export default function ProductsPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-surface">
       <PageHeader
         title="Our Products"
         subtitle="Browse our collection of premium 3D printed items."
@@ -15,8 +15,8 @@ export default function ProductsPage() {
             <ProductCard key={product.slug} product={product} />
           ))}
         </div>
-        <div className="mt-12 rounded-xl bg-blue-50 p-8 text-center">
-          <p className="font-medium text-blue-900">
+        <div className="mt-12 rounded-xl bg-secondary-container p-8 text-center">
+          <p className="font-medium text-on-secondary-container">
             More products coming soon! Contact us for custom orders.
           </p>
         </div>

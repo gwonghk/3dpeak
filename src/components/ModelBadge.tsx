@@ -5,7 +5,7 @@ interface ModelBadgeProps {
 export default function ModelBadge({ className = "" }: ModelBadgeProps) {
   return (
     <div
-      className={`absolute top-3 left-3 flex items-center gap-1 rounded-full bg-black/70 backdrop-blur-sm px-2.5 py-1.5 text-xs font-semibold text-white shadow-sm ${className}`}
+      className={`absolute top-3 left-3 flex items-center gap-1 rounded-full bg-scrim-dark backdrop-blur-sm px-2.5 py-1.5 text-xs font-semibold text-white shadow-sm ${className}`}
     >
       {/* Cube icon */}
       <svg
