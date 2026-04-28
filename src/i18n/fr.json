@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "about": "À propos",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "headline": "Impression de Précision",
+      "subheadline": "Fait Main",
+      "description": "Curiosités surprenantes à collectionner",
+      "browseCta": "Découvrir",
+      "subscribeCta": "S'abonner"
+    },
+    "features": {
+      "heading": "Pourquoi PeakCraft?",
+      "items": [
+        {
+          "icon": "🎨",
+          "title": "Curiosités Sélectionnées",
+          "description": "Designs choisis, imprimés en 3D, terminés à la main."
+        },
+        {
+          "icon": "✨",
+          "title": "Impression de Précision",
+          "description": "Imprimés avec des matériaux premium pour des designs détaillés."
+        },
+        {
+          "icon": "🚚🇨🇦",
+          "title": "Livraison au Canada",
+          "description": "Fabriqué au Canada, pour les Canadiens."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Prêt à explorer?",
+      "description": "Découvrez notre collection actuelle et trouvez quelque chose qui vous parle.",
+      "button": "Voir la Collection"
+    },
+    "subscribe": {
+      "heading": "Soyez les Premiers",
+      "description": "Soyez les premiers informés de nos nouveaux produits. Pas de spam, que du bon.",
+      "placeholder": "votre@email.com",
+      "button": "Me Notifier"
+    }
+  },
+  "subscribe": {
+    "title": "Restez Informé",
+    "subtitle": "Soyez les premiers informés de nos nouveaux produits. Pas de spam, que du bon.",
+    "placeholder": "votre@email.com",
+    "button": "S'abonner",
+    "loading": "Inscription...",
+    "success": "Presque rendu! Vérifiez votre boîte de réception pour confirmer.",
+    "error": "Une erreur est survenue. Veuillez réessayer."
+  },
+  "footer": {
+    "tagline": "Curiosités imprimées en 3D du Canada."
+  },
+  "products": {
+    "heading": "Notre Collection",
+    "empty": "Aucun produit trouvé.",
+    "outOfStock": "Rupture de Stock",
+    "viewProduct": "Voir les Détails"
+  },
+  "product": {
+    "addToCart": "Ajouter au Panier",
+    "inStock": "En Stock",
+    "outOfStock": "Rupture de Stock"
+  },
+  "common": {
+    "learnMore": "En Savoir Plus",
+    "back": "Retour",
+    "loading": "Chargement..."
+  }
+}

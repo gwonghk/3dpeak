@@ -27,6 +27,7 @@
 # AI agent files
 AGENTS.md
 CLAUDE.md
+TODO.md
 
 # debug
 npm-debug.log*

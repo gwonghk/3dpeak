@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "headline": "Precision Printed",
+      "subheadline": "Hand Crafted",
+      "description": "Curious collectables for play",
+      "browseCta": "Check it out",
+      "subscribeCta": "Get Updates"
+    },
+    "features": {
+      "heading": "Why PeakCraft?",
+      "items": [
+        {
+          "icon": "🎨",
+          "title": "Curated Curiosities",
+          "description": "Choice designs, 3D printed, hand finished."
+        },
+        {
+          "icon": "✨",
+          "title": "Precision Printed",
+          "description": "Printed with premium materials for detailed designs."
+        },
+        {
+          "icon": "🚚🇨🇦",
+          "title": "Canada Wide Shipping",
+          "description": "Made in Canada, for Canadians."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Ready to explore?",
+      "description": "Take a look at our current collection and find something that speaks to you.",
+      "button": "View Collection"
+    },
+    "subscribe": {
+      "heading": "Get Notified First",
+      "description": "Be the first to know when we launch new products. No spam, just the good stuff.",
+      "placeholder": "your@email.com",
+      "button": "Notify Me"
+    }
+  },
+  "subscribe": {
+    "title": "Stay in the Loop",
+    "subtitle": "Be the first to know when we launch new products. No spam, just the good stuff.",
+    "placeholder": "your@email.com",
+    "button": "Subscribe",
+    "loading": "Subscribing...",
+    "success": "Almost there! Check your inbox to confirm your subscription.",
+    "error": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "tagline": "3D printed curiosities from Canada."
+  },
+  "products": {
+    "heading": "Our Collection",
+    "empty": "No products found.",
+    "outOfStock": "Out of Stock",
+    "viewProduct": "View Details"
+  },
+  "product": {
+    "addToCart": "Add to Cart",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "back": "Back",
+    "loading": "Loading..."
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "首页",
+    "products": "产品",
+    "about": "关于我们",
+    "faq": "常见问题",
+    "contact": "联系我们"
+  },
+  "home": {
+    "hero": {
+      "headline": "精密印刷",
+      "subheadline": "手工制作",
+      "description": "为玩乐而生的奇妙收藏品",
+      "browseCta": "去看看",
+      "subscribeCta": "获取更新"
+    },
+    "features": {
+      "heading": "为什么选择 PeakCraft？",
+      "items": [
+        {
+          "icon": "🎨",
+          "title": "精心挑选的奇物",
+          "description": "精选设计、3D 打印、手工打磨。"
+        },
+        {
+          "icon": "✨",
+          "title": "精密印刷",
+          "description": "采用优质材料打印，呈现精细设计。"
+        },
+        {
+          "icon": "🚚🇨🇦",
+          "title": "加拿大全境配送",
+          "description": "加拿大制造，服务加拿大。"
+        }
+      ]
+    },
+    "cta": {
+      "heading": "准备好探索了吗？",
+      "description": "浏览我们当前的系列，找到属于你的那一款。",
+      "button": "查看系列"
+    },
+    "subscribe": {
+      "heading": "抢先知道新品",
+      "description": "第一时间获知新品发布信息。没有垃圾邮件，只有好东西。",
+      "placeholder": "your@email.com",
+      "button": "通知我"
+    }
+  },
+  "subscribe": {
+    "title": "保持联系",
+    "subtitle": "第一时间获知新品发布信息。没有垃圾邮件，只有好东西。",
+    "placeholder": "your@email.com",
+    "button": "订阅",
+    "loading": "正在订阅...",
+    "success": "即将完成！请查收邮件确认订阅。",
+    "error": "出现错误，请重试。"
+  },
+  "footer": {
+    "tagline": "来自加拿大的 3D 打印奇物。"
+  },
+  "products": {
+    "heading": "我们的系列",
+    "empty": "未找到产品。",
+    "outOfStock": "缺货",
+    "viewProduct": "查看详情"
+  },
+  "product": {
+    "addToCart": "加入购物车",
+    "inStock": "有货",
+    "outOfStock": "缺货"
+  },
+  "common": {
+    "learnMore": "了解更多",
+    "back": "返回",
+    "loading": "加载中..."
+  }
+}

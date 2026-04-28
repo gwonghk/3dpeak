@@ -2,13 +2,23 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { navLinks } from "@/data/navLinks";
 import { brand } from "@/config/brand";
 import NavLink from "./NavLink";
-// import ThemeToggle from "./ThemeToggle";
+import LanguageToggle from "./LanguageToggle";
+import ThemeToggle from "./ThemeToggle";
+import { useTranslation } from "@/i18n/I18nProvider";
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navLinks = [
+    { href: "/", label: t("nav.home") },
+    { href: "/products", label: t("nav.products") },
+    { href: "/about", label: t("nav.about") },
+    { href: "/faq", label: t("nav.faq") },
+    { href: "/contact", label: t("nav.contact") },
+  ];
 
   return (
     <nav className="bg-background shadow-md sticky top-0 z-50">
@@ -24,8 +34,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <NavLink key={link.href} link={link} variant="navbar" />
             ))}
-            {/* TODO: Implement theme toggle */}
-            {/* <ThemeToggle variant="icon" /> */}
+            <ThemeToggle variant="icon" />
           </div>
 
           <button
@@ -77,8 +86,10 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
               />
             ))}
-            {/* TODO: Implement theme toggle */}
-            {/* <ThemeToggle variant="text" /> */}
+            <div className="flex items-center gap-4 pt-2 border-t border-outline">
+              <ThemeToggle variant="text" />
+              <LanguageToggle />
+            </div>
           </div>
         </div>
       )}
