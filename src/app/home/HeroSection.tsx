@@ -20,7 +20,7 @@ export default function HeroSection() {
           <Button variant="primary" href="/products">
             {browseCta}
           </Button>
-          <Button variant="secondary" href="/about">
+          <Button variant="secondary" href="/subscribe">
             {subscribeCta}
           </Button>
         </div>
