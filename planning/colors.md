@@ -1,8 +1,29 @@
 # 3dpeak Color Palette
 
-https://coolors.co/ffcba4-cbf3f0-fff8f0-001514-0072bb
+---
 
-## peach-glow
+## Current Palette — Material 3 Semantic Tokens
+
+**Status:** Migrated from the original coral/peach + mint/teal palette during the Material 3 migration (2026-04).
+
+```
+Primary:    Sunflower Gold    (#eea811 / #f2ba40)
+Secondary:  Alice Blue        (#0a58f5 / #3b7af7)
+Tertiary:   Fiery Terracotta (#e23e1d / #ed8b78)
+Background: Vanilla Cream   (#f9f6eb / #f3ecd8)
+Surface:    White           (#ffffff)
+Text:       Ink Black       (#101a23 / #1e293b)
+```
+
+The palette uses Material 3 color roles (primary, secondary, tertiary, surface, etc.) and supports both light and dark modes via semantic token overrides.
+
+See `src/app/globals.css` for the full token definitions.
+
+---
+
+## Original Palette (superseded) — 2026-04-16
+
+### peach-glow
 
 | Token          | Hex     | Use           |
 | -------------- | ------- | ------------- |
@@ -18,7 +39,7 @@ https://coolors.co/ffcba4-cbf3f0-fff8f0-001514-0072bb
 | peach-glow-900 | #331600 |               |
 | peach-glow-950 | #240f00 | Darkest       |
 
-## frozen-water
+### frozen-water
 
 | Token            | Hex     | Use             |
 | ---------------- | ------- | --------------- |
@@ -34,7 +55,7 @@ https://coolors.co/ffcba4-cbf3f0-fff8f0-001514-0072bb
 | frozen-water-900 | #0a2927 |                 |
 | frozen-water-950 | #071d1b | Darkest         |
 
-## floral-white
+### floral-white
 
 | Token            | Hex     | Use             |
 | ---------------- | ------- | --------------- |
@@ -50,7 +71,7 @@ https://coolors.co/ffcba4-cbf3f0-fff8f0-001514-0072bb
 | floral-white-900 | #331b00 |                 |
 | floral-white-950 | #241300 |                 |
 
-## ink-black
+### ink-black
 
 | Token         | Hex     | Use           |
 | ------------- | ------- | ------------- |
@@ -66,7 +87,7 @@ https://coolors.co/ffcba4-cbf3f0-fff8f0-001514-0072bb
 | ink-black-900 | #003330 |               |
 | ink-black-950 | #002422 |               |
 
-## twitter-blue
+### twitter-blue
 
 | Token            | Hex     | Use              |
 | ---------------- | ------- | ---------------- |
@@ -80,4 +101,4 @@ https://coolors.co/ffcba4-cbf3f0-fff8f0-001514-0072bb
 | twitter-blue-700 | #005e99 |                  |
 | twitter-blue-800 | #003f66 |                  |
 | twitter-blue-900 | #001f33 |                  |
-| twitter-blue-950 | #001624 |                  |
+| twitter-blue-950 | #001624 |                 |

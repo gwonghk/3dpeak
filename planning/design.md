@@ -9,10 +9,17 @@
 
 ## Color Palette
 
+### Original Concept (superseded)
+> The original palette was coral/peach + mint/teal. This approach was later replaced by Material 3 semantic tokens.
+
 - **Primary:** Coral/Peach — `#FF6B6B` or `#FF9F89` (warm, friendly, gift-worthy)
 - **Secondary:** Mint/Teal — `#06D6A0` or `#64DFDF` (playful, not childish)
 - **Background:** Warm cream — `#FFF8F0` (not cold white/gray)
 - **Text:** Warm charcoal (not pure black)
+
+See `colors.md` for the current palette.
+
+---
 
 ## Typography
 - Display font (headings): Fredoka, Quicksand, or Sora — rounded, friendly
@@ -30,11 +37,6 @@
 - Category tags with pastel backgrounds
 - Friendly "Inquire" button
 
-## Interactions
-- Bouncy micro-animations — buttons that squish on click
-- Cards that wiggle on hover
-- Smooth scroll reveals
-
 ## Hero Section Ideas
 - Split layout: text left, bold product photo right
 - Or: warm illustrated bg with floating 3D print objects
@@ -48,3 +50,7 @@
 
 ## Status
 Ideas documented. Awaiting user feedback before implementation.
+
+## Pending Animations & Interactions
+
+See `planning/TODO.md` for full animation/interaction backlog.

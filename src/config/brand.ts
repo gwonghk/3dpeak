@@ -1,5 +1,5 @@
 export const brand = {
-  name: "PeakCraft 🐾",
-  tagline: "Bringing ideas to life, one layer at a time.",
+  name: "PeakLab",
+  tagline: "3D printed curiosities from Canada.",
   url: "https://3dpeak.ca",
 } as const;
