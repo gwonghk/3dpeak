@@ -5,7 +5,6 @@ import Link from "next/link";
 import { brand } from "@/config/brand";
 import NavLink from "./NavLink";
 import LanguageToggle from "./LanguageToggle";
-import ThemeToggle from "./ThemeToggle";
 import { useTranslation } from "@/i18n/I18nProvider";
 
 export default function Navbar() {
@@ -34,7 +33,6 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <NavLink key={link.href} link={link} variant="navbar" />
             ))}
-            <ThemeToggle variant="icon" />
           </div>
 
           <button
@@ -86,10 +84,7 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
               />
             ))}
-            <div className="flex items-center gap-4 pt-2 border-t border-outline">
-              <ThemeToggle variant="text" />
-              <LanguageToggle />
-            </div>
+            <LanguageToggle />
           </div>
         </div>
       )}
