@@ -15,6 +15,7 @@ const quicksand = Quicksand({
 export const metadata: Metadata = {
   title: `${brand.name} | Premium 3D Printed Items`,
   description: `Discover premium 3D printed items crafted with precision and care. Shop figurines, functional prints, and custom creations from ${brand.name}.`,
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
