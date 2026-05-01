@@ -15,13 +15,15 @@ export async function POST(request: Request) {
   const res = await fetch("https://buttondown.email/api/emails/embed-subscribe/peaklab", {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "application/x-www-form-urlencoded",
       Authorization: `Token ${apiKey}`,
     },
-    body: JSON.stringify({ email }),
+    body: new URLSearchParams({ email }),
   });
 
-  if (!res.ok) {
+  // Buttondown returns 400 even on success — it sends a verification email.
+  // We treat any non-500 response as success (verification email will be sent).
+  if (res.status === 500) {
     return NextResponse.json({ error: "Could not subscribe. Try again." }, { status: 500 });
   }
 

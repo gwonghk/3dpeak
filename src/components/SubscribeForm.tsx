@@ -7,15 +7,14 @@ interface SubscribeFormProps {
   onSuccess?: (email: string) => void;
 }
 
-export default function SubscribeForm({
-  variant = "inline",
-  onSuccess,
-}: SubscribeFormProps) {
+function useSubscribeForm(onSuccess?: (email: string) => void) {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!email) return;
 
@@ -36,7 +35,9 @@ export default function SubscribeForm({
         setMessage(data.error ?? "Something went wrong. Please try again.");
       } else {
         setStatus("success");
-        setMessage("Almost there! Check your inbox to confirm your subscription.");
+        setMessage(
+          "Almost there! Check your inbox to confirm your subscription.",
+        );
         setEmail("");
         onSuccess?.(email);
       }
@@ -44,16 +45,28 @@ export default function SubscribeForm({
       setStatus("error");
       setMessage("Connection error. Please try again.");
     }
-  };
+  }
 
+  return { email, setEmail, status, message, handleSubmit };
+}
+
+export default function SubscribeForm({
+  variant = "inline",
+  onSuccess,
+}: SubscribeFormProps) {
+  const { email, setEmail, status, message, handleSubmit } =
+    useSubscribeForm(onSuccess);
   const isLoading = status === "loading";
 
   if (variant === "standalone") {
     return (
       <div className="max-w-md mx-auto py-16 px-4">
-        <h1 className="text-3xl font-bold mb-4 text-on-primary">Stay in the Loop</h1>
+        <h1 className="text-3xl font-bold mb-4 text-on-primary">
+          Stay in the Loop
+        </h1>
         <p className="text-on-primary-container mb-8">
-          Be the first to know when we launch new products. No spam, just the good stuff.
+          Be the first to know when we launch new products. No spam, just the
+          good stuff.
         </p>
 
         {status === "success" ? (
@@ -98,7 +111,8 @@ export default function SubscribeForm({
           Get Notified First
         </h2>
         <p className="text-on-secondary-container mb-8 max-w-xl mx-auto">
-          Be the first to know when we launch new products. No spam, just the good stuff.
+          Be the first to know when we launch new products. No spam, just the
+          good stuff.
         </p>
 
         {status === "success" ? (

@@ -1,8 +1,7 @@
 import Button from "@/components/Button";
 import { homeContent } from "@/data/home-content";
 
-const { headline, subheadline, description, browseCta, subscribeCta } =
-  homeContent.hero;
+const { headline, subheadline, description, browseCta } = homeContent.hero;
 
 export default function HeroSection() {
   return (
@@ -19,9 +18,6 @@ export default function HeroSection() {
         <div className="flex justify-center gap-4">
           <Button variant="primary" href="/products">
             {browseCta}
-          </Button>
-          <Button variant="secondary" href="/subscribe">
-            {subscribeCta}
           </Button>
         </div>
       </div>
